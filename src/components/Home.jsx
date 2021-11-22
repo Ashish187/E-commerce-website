@@ -3,6 +3,7 @@ import './Home.css'
 import img1 from '../images/b.jpg'
 import img2 from '../images/l.jpg'
 import img3 from '../images/phone.jpg'
+import Products from './Products'
 
 const Home = () => {
     return (
@@ -33,6 +34,8 @@ const Home = () => {
    <h1>SALE IS LIVE NOW</h1>
    <h3>10% instant discount* with Sbi credit card & also on Emi Trxns</h3>
 </div>
+
+<Products/>
 </div>
         </>
         
