@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 
+body{
+    background: black;
+}
 .container h1{
+    color: white;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.card{
+    color: white;
+    background: grey;
 }

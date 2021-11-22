@@ -7,7 +7,14 @@
 nav .nav-item{
     font-size: 20px;
 }
-nav .nav-item:hover{
+nav .allLink{
+    text-decoration: none;
+    color: white;
+    margin-left: 18px;
+}
+
+
+nav .nav-item .allLink:hover{
     color: grey;
 }
 
