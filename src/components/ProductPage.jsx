@@ -1,4 +1,6 @@
 import React,{useState,useEffect} from 'react'
+import { useDispatch } from 'react-redux'
+import { addCart } from '../redux/action/action'
 import { NavLink, useParams } from 'react-router-dom'
 import Skeleton from 'react-loading-skeleton'
 import './ProductPage.css'
@@ -7,6 +9,11 @@ const ProductPage = () => {
     const {id} = useParams()
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false)
+
+    const dispatch = useDispatch()
+    const addProduct = (product) =>{
+        dispatch(addCart(product))
+    }
 
     useEffect(() => {
         const getProduct = async () =>{
@@ -43,14 +50,14 @@ const ProductPage = () => {
                 </div>
                 <div className="col-md-6">
                     <h4 className='text-uppercase'>{product.category}</h4>
-                    <h1 className='display-5'>{product.title}</h1>
+                    <h1 className='display-5 title'>{product.title}</h1>
                     <p className='fw-bold'>
                         Rating {product.rating && product.rating.rate}
                         <i className='fas fa-star'></i>
                     </p>
-                    <h3>{product.price}</h3>
+                    <h3>Rs.{product.price}</h3>
                     <p className='lead'>{product.description}</p>
-                    <button className='btn btn-outline-dark'>Add To Cart</button>
+                    <button className='btn btn-outline-dark' onClick={()=>addProduct(product)}>Add To Cart</button>
 
                     <NavLink to="/cart" className='btn btn-dark mx-3'>Go To Cart</NavLink>
                 </div>

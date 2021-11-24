@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     background: black;
-}
+} */
 .container h1{
     color: white;
     margin-top: 2rem;
